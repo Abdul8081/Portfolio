@@ -1,4 +1,4 @@
-You can see live my portfolio at : `https://portfolio-two-lilac-s0pxup697i.vercel.app/`
+You can see live my portfolio at : https://portfolio-two-lilac-s0pxup697i.vercel.app/
 
 ## 🚀 How to Run the Project
 
