@@ -1,0 +1,9 @@
+{
+  "priority": 1,
+  "title": "Tech Study Blog",
+  "shortDescription": "Full-stack blog app built with Next.js, focused on in-depth study content. Each blog covers fundamentals to advanced concepts along with official documentation and video resources for crystal-clear understanding.",
+  "cover": "/blogs_image.jpg",
+  "livePreview": "https://tech-blog-hunting-coder.vercel.app/",
+  "type": "Personal Project 🙍‍♂️",
+  "siteAge": "1 month old"
+}

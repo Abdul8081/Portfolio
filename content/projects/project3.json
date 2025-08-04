@@ -1,0 +1,9 @@
+{
+  "priority": 3,
+  "title": "Weather App",
+  "shortDescription": "A sleek and responsive weather application that provides real-time weather updates using location-based data. Displays temperature, conditions, and forecasts with a clean and minimal UI, perfect for quick daily checks.",
+  "cover": "/weather_app.jpg",
+  "livePreview": "https://weather-app-sooty-tau-22.vercel.app/",
+  "type": "Personal Project 💻",
+  "siteAge": "2 months old"
+}

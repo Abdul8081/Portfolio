@@ -1,0 +1,9 @@
+{
+  "priority": 4,
+  "title": "Tic Tac Toe Game",
+  "shortDescription": "A classic two-player Tic Tac Toe game built with HTML, CSS, and JavaScript. Features smooth UI interactions and logic to detect winning conditions, draws, and allows replaying — perfect for casual fun and DOM practice.",
+  "cover": "/tick_tak_toe.jpg",
+  "livePreview": "https://abdul8081.github.io/TIc_Tac_Toe_Game/",
+  "type": "Personal Project 💻",
+  "siteAge": "4 months old"
+}
