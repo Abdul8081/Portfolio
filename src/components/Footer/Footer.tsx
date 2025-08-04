@@ -66,8 +66,8 @@ const Footer = () => {
               <div>
                 <h5 className="text-neutral mb-4 text-lg font-medium">Location</h5>
                 <address className="text-tertiary-content flex flex-col text-sm font-light">
-                  <span>123456, India</span>
-                  <span>Kushinagar 22/5/8, Office 4</span>
+                  <span>274401, India</span>
+                  <span>Kushinagar, Uttar Pradesh</span>
                 </address>
               </div>
             </div>

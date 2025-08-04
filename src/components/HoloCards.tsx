@@ -9,19 +9,26 @@ interface HoloCardProps {
 
 const COLORS = [
   "#38BDF8", // Sky blue
-//   "#34D399", // Green
-//   "#F472B6", // Pink
-//   "#FBBF24", // Amber
-//   "#A78BFA", // Purple
   "#F87171", // Red
 ];
+
+// ✅ Deterministic pseudo-random function
+function deterministicColor(seed: string) {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) {
+    hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const index = Math.abs(hash) % COLORS.length;
+  return COLORS[index];
+}
 
 const HoloCard: React.FC<HoloCardProps> = ({ children, className = "", color }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [glowEdges, setGlowEdges] = useState({ top: false, bottom: false, left: false, right: false });
   const [gradientPos, setGradientPos] = useState({ x: "50%", y: "50%" });
 
-  const cardColor = color || COLORS[Math.floor(Math.random() * COLORS.length)];
+  // ✅ Use deterministic color to match SSR and Client
+  const stableColor = color || deterministicColor(children?.toString() || "default");
 
   useEffect(() => {
     const card = cardRef.current;
@@ -44,10 +51,9 @@ const HoloCard: React.FC<HoloCardProps> = ({ children, className = "", color }) 
 
       setGradientPos({ x: `${(x / rect.width) * 100}%`, y: `${(y / rect.height) * 100}%` });
 
-      // ✅ Fixed tilt direction (now matches cursor movement)
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = ((centerY - y) / centerY) * 10; 
+      const rotateX = ((centerY - y) / centerY) * 10;
       const rotateY = ((x - centerX) / centerX) * 10;
       card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     };
@@ -73,14 +79,14 @@ const HoloCard: React.FC<HoloCardProps> = ({ children, className = "", color }) 
         ref={cardRef}
         className={`relative transition-transform duration-300 ease-out rounded-xl ${className}`}
         style={{
-          background: `radial-gradient(circle at ${gradientPos.x} ${gradientPos.y}, ${cardColor}30, ${cardColor}10, transparent 80%)`,
-          border: `1.5px solid ${cardColor}40`, // ✅ Default faint border
+          background: `radial-gradient(circle at ${gradientPos.x} ${gradientPos.y}, ${stableColor}30, ${stableColor}10, transparent 80%)`,
+          border: `1.5px solid ${stableColor}40`,
           borderRadius: "12px",
           boxShadow: `
-            ${glowEdges.top ? `0 -6px 20px ${cardColor}` : ""},
-            ${glowEdges.bottom ? `0 6px 20px ${cardColor}` : ""},
-            ${glowEdges.left ? `-6px 0 20px ${cardColor}` : ""},
-            ${glowEdges.right ? `6px 0 20px ${cardColor}` : ""}
+            ${glowEdges.top ? `0 -6px 20px ${stableColor}` : ""},
+            ${glowEdges.bottom ? `0 6px 20px ${stableColor}` : ""},
+            ${glowEdges.left ? `-6px 0 20px ${stableColor}` : ""},
+            ${glowEdges.right ? `6px 0 20px ${stableColor}` : ""}
           `,
         }}
       >
