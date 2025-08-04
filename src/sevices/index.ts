@@ -1,4 +1,4 @@
-import { Project, Testimonial } from '@/lib/types'
+import { Project } from '@/lib/types'
 import { promises as fs } from 'fs'
 import path from 'path'
 
