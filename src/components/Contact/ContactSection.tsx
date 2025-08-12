@@ -15,14 +15,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        {/* View Resume link */}
-        <a
-          href="/Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-            className="inline-block w-fit rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-[#00071E] shadow-md transition-all duration-300 hover:scale-105 hover:bg-opacity-90 hover:shadow-lg">
-          View My Resume
-        </a>
+        
 
 
         <div className="space-y-2">
