@@ -1,9 +1,9 @@
 {
-  "priority": 1,
-  "title": "Tech Study Blog",
-  "shortDescription": "Full-stack blog app built with Next.js, focused on in-depth study content. Each blog covers fundamentals to advanced concepts along with official documentation and video resources for crystal-clear understanding.",
-  "cover": "/blogs_image.jpg",
-  "livePreview": "https://tech-blog-hunting-coder.vercel.app/",
-  "type": "Personal Project 🙍‍♂️",
+  "priority": 2,
+  "title": "FINMATE – Project",
+  "shortDescription": "A full-stack AI-powered financial advisory platform that automatically categorizes transactions, identifies surplus savings, analyzes user risk profile, and recommends a personalized investment portfolio with clear 12-month projections.",
+  "cover": "/finmate.webp",
+  "livePreview": "https://github.com/Abdul8081/FinMate",
+  "type": "AI + FinTech",
   "siteAge": "1 month old"
 }

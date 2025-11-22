@@ -1,9 +1,9 @@
 {
-  "priority": 2,
-  "title": "Sports Events Management System",
-  "shortDescription": "A comprehensive platform full frontend-backend with My SQL database integrated for managing sports events, teams, and schedules. Designed to streamline coordination between coaches, players, and event organizers with dedicated dashboards and real-time updates.",
-  "cover": "/sports_image.avif",
-  "livePreview": "https://github.com/Abdul8081/SportsPark",
-  "type": "Academic Project 🎓",
+  "priority": 1,
+  "title": "JobPortal",
+  "shortDescription": "A full-stack platform that allows users to explore job listings, apply for roles, and manage applications with ease. Employers can post job openings, track applicants, and streamline the hiring workflow. Designed with clean UI and smooth backend integration for a seamless experience.",
+  "cover": "/jobportal.jpg",
+  "livePreview": "https://jobportal-059k.onrender.com/",
+  "type": "Personal Project",
   "siteAge": "6 months old"
 }

@@ -50,6 +50,7 @@ const ExperienceSection = () => {
 
     {experiences.map((exp, index) => (
         <div
+          key = {index}
           className={`flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-between md:gap-12 lg:gap-20 ${
             index % 2 !== 0 ? 'md:flex-row-reverse' : ''
           }`}>
